@@ -40,21 +40,21 @@ dependencies {
 
 	// Fabric API and adventure. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation include("net.kyori:adventure-platform-fabric:5.5.1")
-	implementation "net.kyori:adventure-text-serializer-legacy:4.12.0"
+	modImplementation include("net.kyori:adventure-platform-fabric:5.7.0")
+	implementation "net.kyori:adventure-text-serializer-legacy:4.13.0"
 
 	// Lombok
-	compileOnly 'org.projectlombok:lombok:1.18.24'
-	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
 
 	// Jackson
-	library "com.fasterxml.jackson.core:jackson-databind:2.14.0"
-	library("com.nukkitx.jackson.dataformat:jackson-dataformat-nbt:2.10.3-SNAPSHOT") {
+	library "com.fasterxml.jackson.core:jackson-databind:2.14.2"
+	library("com.nukkitx.jackson.dataformat:jackson-dataformat-nbt:2.12.4-SNAPSHOT") {
 		exclude group: 'com.nukkitx.nbt'
 	}
 
 	// Events
-	library("com.nukkitx:common:1.0.1-SNAPSHOT") {
+	library("com.nukkitx:common:2.6.2-SNAPSHOT") {
 		exclude group: 'com.google.guava'
 	}
 }
@@ -72,7 +72,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
+	// Minecraft 1.19.3 (1.1.9.3) upwards uses Java 17.
 	it.options.release = 17
 }
 
