@@ -48,7 +48,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.26'
 
 	// Jackson
-	library "com.fasterxml.jackson.core:jackson-databind:2.14.2"
+	library "com.fasterxml.jackson.core:jackson-databind:2.14.0"
 	library("com.nukkitx.jackson.dataformat:jackson-dataformat-nbt:2.12.4-SNAPSHOT") {
 		exclude group: 'com.nukkitx.nbt'
 	}
